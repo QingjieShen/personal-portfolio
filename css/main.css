@@ -140,12 +140,14 @@
     width: 100%;
     background-color: var(--default-black);
     color: var(--default-white);
+    /* font-family:Verdana, Geneva, Tahoma, sans-serif */
   }
   
   .unit h3 {
     text-align: center;
     margin: 10px 5px;
-    /* font-weight: light; */
+    font-weight: 200;
+    font-size: 16px;
     padding: 20px 5px;
   }
   
@@ -153,13 +155,20 @@
     aspect-ratio: 1920/1080;
     width: 100%;
   }
-  
-  /* add some hover effect */
+
+/* add some hover effect */
   .unit:hover {
+    transform: scale(0.9);
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+  }
+  
+  .unit.video-unit:hover {
     transform: scale(1.1);
     transition-duration: 0.3s;
     transition-timing-function: ease;
   }
+
   
   /* web-dev and photography projects */
   .webdev-projects img, .photography-projects img {

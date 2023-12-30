@@ -5,8 +5,13 @@
   html {
     font-family: sans-serif;
     scroll-behavior: smooth;
+    padding: 0;
   }
   
+body {
+    margin: 0;
+}
+
   :root {
     --header-background: #f0a966;
     --welcome-background: #8db0b9;
@@ -27,6 +32,7 @@
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 1;
   }
   
   header img {

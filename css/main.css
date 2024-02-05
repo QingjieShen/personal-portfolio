@@ -240,6 +240,10 @@ main {
   color: var(--default-white);
 }
 
+.contact ul li a:hover {
+  color: var(--header-background);
+}
+
 /* footer */
 footer {
   background-color: var(--welcome-background);

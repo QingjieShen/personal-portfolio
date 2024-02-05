@@ -1,15 +1,28 @@
 * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
   
-  html {
-    font-family: sans-serif;
-    scroll-behavior: smooth;
-    padding: 0;
+html {
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+  padding: 0;
+}
+
+/* Fade in loding effects */
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
   }
+  100% {
+    opacity: 1;
+  }
+}
   
 body {
-    margin: 0;
+  margin: 0;
+  animation: fadeInAnimation ease-out 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 :root {
@@ -306,3 +319,4 @@ footer {
     height: 120px;
   }
 }
+

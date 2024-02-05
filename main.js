@@ -13,5 +13,6 @@ const typeWriter = () => {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    typeWriter();
+    setTimeout(typeWriter, 1000)
+    //typeWriter();
 });

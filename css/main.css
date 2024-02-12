@@ -120,10 +120,11 @@ video {
 .welcome .wrapper {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.601);
-  padding: 60px 40px;
+  padding: 60px auto;
   border-radius: 20px;
   left: auto;
   bottom: 10%;
+  max-width: 100%;
 }
 
 .welcome h1 {
@@ -134,7 +135,8 @@ video {
 }
 
 .welcome p {
-  color: var(--header-background);
+  /* color: var(--header-background); */
+  color: var(--default-white);
   margin: 0;
   font-size: 20px;
   font-style: italic;
@@ -154,7 +156,8 @@ video {
   border-radius: 10px;
   width: min(415px, 100vw);
   line-height: 1.3rem;
-  height: 80px;
+  height: 120px;
+  max-width: 100%;
 }
 
 /* Projects part */
@@ -333,7 +336,7 @@ footer {
   }
 
   .welcome .type-writer {
-    height: 90px;
+    height: 100px;
   }
 
   .peoject-section h2 {
@@ -342,6 +345,12 @@ footer {
       #554d4a 20%,
       transparent 60%
     );
+  }
+}
+
+@media only screen and (min-width: 474px) {
+  .welcome .type-writer {
+    height: 90px;
   }
 }
 

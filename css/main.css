@@ -27,7 +27,7 @@ body {
 
 :root {
   --header-background: #f0a966;
-  --welcome-background: #8db0b9;
+  --welcome-background: #8d9eb9;
   --default-black: #373230;
   --default-white: #fef7f1;
 }
@@ -165,6 +165,10 @@ video {
 main {
   padding: 40px 10px;
   background-color: var(--welcome-background);
+}
+
+#projects h1 {
+  font-size: 40px;
 }
 
 .project-title {

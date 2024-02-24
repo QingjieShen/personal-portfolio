@@ -218,6 +218,7 @@ main {
   color: var(--default-white);
   /* font-family:Verdana, Geneva, Tahoma, sans-serif */
   border-radius: 5px;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
 }
 
 .unit h3 {

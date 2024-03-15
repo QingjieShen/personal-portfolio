@@ -3,6 +3,12 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* modal image zoom animation */
+@keyframes zoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+}
+
 .used-car-page, .event-page, .britannia-beach-page {
     display: flex;
     flex-direction: column;
@@ -119,7 +125,7 @@ body {
     margin-top: auto;
     top: 10%;
     width: min(100%, 1050px);
-    animation: zoom .5s ease-in-out;
+    animation: zoom .3s ease-in-out;
   }
   
   .modal-img:hover {

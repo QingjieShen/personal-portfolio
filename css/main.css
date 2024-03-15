@@ -17,6 +17,19 @@ html {
     opacity: 1;
   }
 }
+
+/* float animation */
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-15px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
   
 body {
   margin: 0;
@@ -70,7 +83,8 @@ header nav ul {
 
 header nav ul li {
   padding-left: 20px;
-  padding-top: 10px
+  padding-top: 10px;
+  transition: 0.3s ease;
 }
 
 a {
@@ -115,6 +129,8 @@ video {
   height: 100%;
   object-fit: cover;
   object-position: 74% 0%;
+  /* opacity: 0.7; */
+  /* filter: blur(1px); */
 }
 
 .welcome .wrapper {
@@ -160,6 +176,22 @@ video {
   max-width: 100%;
 }
 
+.action {
+  position: absolute;
+  bottom: 3%;
+  /* left: 20%; */
+  animation: float 3.5s ease-in-out infinite;
+  opacity: 0.5;
+}
+.action p:nth-of-type(1) {
+  color: var(--default-white);
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-size: 3rem;
+  margin: 0;
+  text-shadow: 0 1px 20px rgb(52, 52, 52);
+}
+
 /* Projects part */
 /* title */
 main {
@@ -190,7 +222,8 @@ main {
   );
   padding: 10px;
   color: var(--default-white);
-  margin-top: 40px;
+  margin-top: 50px;
+  margin-bottom: 15px;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
@@ -236,15 +269,17 @@ main {
 
 /* add some hover effect */
 .unit:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition-duration: 0.3s;
   transition-timing-function: ease;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.7);
 }
 
 .unit.video-unit:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition-duration: 0.3s;
   transition-timing-function: ease;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.7);
 }
 
 
@@ -252,6 +287,46 @@ main {
 .webdev-projects img, .photography-projects img {
   width: 100%;
   border-radius: 5px;
+}
+
+.photography-unit {
+  position: relative;
+  text-align: left;
+}
+
+.photography-unit img {
+  transition: .5s ease;
+}
+
+.photography-unit:hover > img {
+  opacity: 0.3;
+}
+
+.photo-description {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: .5s ease;
+  text-shadow: 0 1px 1px rgb(14, 14, 14);
+  cursor: pointer;
+  width: 90%;
+}
+
+.photo-description > h3 {
+  font-size: 1.6rem;
+  padding: 0;
+  text-align: start;
+  font-weight: 600;
+}
+
+.photo-description > p {
+  font-size: 1.2rem;
+}
+
+.photography-unit:hover > .photo-description {
+  opacity: 1;
 }
 
 /* contact part */

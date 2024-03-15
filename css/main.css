@@ -8,6 +8,10 @@ html {
   padding: 0;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 /* Fade in loding effects */
 @keyframes fadeInAnimation {
   0% {
